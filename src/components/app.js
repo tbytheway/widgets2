@@ -8,7 +8,7 @@ import NameAge from './NameAge';
 import SecretPhrase from './SecretPhrase'
 import Add from './Add'
 import MoveBox from './MoveBox';
-import Todo from './Todo'
+import MouseTracker from './MouseTracker'
 
 export default class App extends Component {
   render() {
@@ -21,14 +21,14 @@ export default class App extends Component {
           <li><NavLink to="/secretphrase">Secret Phrase</NavLink></li>
           <li><NavLink to="/add">Add</NavLink></li>
           <li><NavLink to="/movebox">Move Box</NavLink></li>
-          <li><NavLink to="/todo">ToDo</NavLink></li>
+          <li><NavLink to="/mousetracker">Mouse Tracker</NavLink></li>
           </ul>
           <div className="content">
             <Route exact path="/" component={NameAge}/>
             <Route exact path="/secretphrase" component={SecretPhrase}/>
             <Route exact path="/add" component={Add}/>
             <Route exact path="/movebox" component={MoveBox}/>
-            <Route exact path="/todo" component={Todo}/>
+            <Route exact path="/mousetracker" component={MouseTracker}/>
             
           </div>
         </div>
