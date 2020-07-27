@@ -17,7 +17,7 @@ export default class MouseTracker extends React.Component {
   
     render() {
       return (
-        <div style={{ height: '100vh' }} onMouseMove={this.handleMouseMove}>
+        <div style={{ height: '50vh' }} onMouseMove={this.handleMouseMove}>
           <h1>Move the mouse around!</h1>
           <p>The current mouse position is ({this.state.x}, {this.state.y})</p>
         </div>

@@ -5,6 +5,8 @@ import App from "./components/app";
 
 import "./style/main.scss";
 
+var destination = document.querySelector("#container")
+
 function main() {
   ReactDOM.render(
     <BrowserRouter>
