@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 
-const api = axios.create({baseURL: `http://api.icndb.com/jokes/random`})
+const api = axios.create({baseURL: `https://api.icndb.com/jokes/random`})
 
 
 
