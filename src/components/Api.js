@@ -17,6 +17,7 @@ export default class Api extends Component {
       api.get('/').then(res => {
       this.setState({ joke: res.data.value.joke})
       })
+      this.refreshPage = this.refreshPage.bind(this)
 }    
 
 refreshPage() {

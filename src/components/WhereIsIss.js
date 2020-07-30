@@ -1,44 +1,31 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 
- 
-const API = 'https://coronavirus-19-api.herokuapp.com/';
-const DEFAULT_QUERY = 'all';
- 
-class WhereIsIss extends Component {
+const api = axios.create({baseURL: `https://api.wheretheiss.at/v1/satellites/25544`})
+
+export default class Iss extends Component {
   constructor(props) {
-    super(props);
- 
+    super(props)
     this.state = {
-      hits: [],
-      isLoading: false,
-    };
-  }
- 
-  componentDidMount() {
-    this.setState({ isLoading: true });
+         positions: []
+        }
 
-    fetch(API + DEFAULT_QUERY)
-      .then(response => response.json())
-      .then(data => this.setState({ hits: data.hits, isLoading: false }))
-      .catch(error => this.setState({ error, isLoading: false }));
-  }
-  render() {
-    const { hits, isLoading, error } = this.state;
- 
-    if (error) {
-      return <p>{error.message}</p>;
-    }
-    if (isLoading) {
-        return <p>Loading ...</p>;
-      }
- 
-    return (
-      <ul>
+
        
-      </ul>
-    );
-  }
-  
+}    
+componentDidMount() {
+api.get('/').then(res => {
+        // console.log(res.data)
+      this.setState({ positions: res.data})
+      })
 }
- 
-export default WhereIsIss;
+
+render(){
+  return (
+    <div className="App">
+      <h1>Where is the ISS</h1>
+      <h3>{this.state.positions.map((position) => {
+      return <li>{position.altitude}</li>})}</h3>
+     </div>
+  );}
+}
