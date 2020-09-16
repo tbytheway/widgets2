@@ -18,7 +18,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <h1>Widgets Homework</h1>
+          <h1>Widgets</h1>
           <ul className="header">
           <li><NavLink to="/">Name Age</NavLink></li>
           <li><NavLink to="/secretphrase">Secret Phrase</NavLink></li>
@@ -26,7 +26,7 @@ export default class App extends Component {
           <li><NavLink to="/movebox">Move Box</NavLink></li>
           <li><NavLink to="/mousetracker">Mouse Tracker</NavLink></li>
           <li><NavLink to="/todolist">Todo List</NavLink></li>
-          <li><NavLink to="/api">API</NavLink></li>
+          <li><NavLink to="/api">Chuck Norris Jokes</NavLink></li>
           <li><NavLink to="/iss">ISS</NavLink></li>
 
           </ul>
