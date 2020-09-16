@@ -36,10 +36,10 @@ render(){
   return (
     <div>
       <h1>Where is the ISS</h1>
-      <h3>{this.state.positions.altitude}</h3>
-      <h3>{this.state.positions.velocity}</h3>
-      <h3>{this.state.positions.longitude}</h3>
-      <h3>{this.state.positions.latitude}</h3>
+      <h3>Altitude:{this.state.positions.altitude}</h3>
+      <h3>Velocity:{this.state.positions.velocity}</h3>
+      <h3>Longitude:{this.state.positions.longitude}</h3>
+      <h3>Latitude:{this.state.positions.latitude}</h3>
       
      </div>
   );}
